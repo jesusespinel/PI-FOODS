@@ -1,0 +1,156 @@
+
+.container-form{
+    width:40%;
+    height:auto;
+    background-color: #99FF99;
+    border-radius: 5px;
+    margin: 3rem auto;
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    padding-bottom: 1rem;
+    
+}
+
+.title-container{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem
+}
+
+.elements-form{
+    width: 100%;
+    height: auto;
+  display: flex;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.label{
+text-align: start;
+align-items: flex-start;
+width:20%;
+padding: 0.2rem;
+height: auto;
+font-weight: bold;
+}
+
+.input{
+    width: 60%;
+    border: hidden;
+    margin-left: 1rem;
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    border-bottom: 1px solid black;
+}
+
+.button-recipe{
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-recipe:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-recipe:hover {
+    background-color: #2c974b;
+  }
+  
+  .button-recipe:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-recipe:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-recipe:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+
+  .select-form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .select{
+    width:70%;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    border:hidden;
+    border-bottom: 1px black solid;
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+    box-shadow: 10px 10px 16px 0px rgba(6,187,54,1);
+
+  }
+
+
+  .button-container{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .lista-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  .lista{
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .danger {
+    color: rgb(12, 12, 12);
+    font-size: 9px;
+    padding: 0 2rem;
+    width: 35%;
+  }

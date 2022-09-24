@@ -1,0 +1,16 @@
+.landing-page{
+background-image: url("../hojas-de-estilo/FOOOOOD.jpg");
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+width: 100vw;
+
+}
+.button-welcome{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   
+}
