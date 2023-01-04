@@ -1,5 +1,6 @@
 
 import React from "react";
+import Loader from "./Loader";
 import { Link,} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDetail,cleanFilter,deleteRecipe } from "../actions/index";
@@ -64,20 +65,15 @@ return( // renderizamos el detalle
     ):
     <li>{myRecipe[0].steps}</li>
   }
-    </ol>
-  
-  
+    </ol> 
+    <div className="button-containerone">
+  <Link to = '/home'>
+    <button className="button-recipe">Volver atrás</button></Link>
+  </div>
    </div>
-   
-
-       
-         </div>:<img className="cargador"
-         src="https://th.bing.com/th/id/R.4d3652eb2e65b9560020e72a3e51dcb5?rik=TN4q6NeXsR3llQ&riu=http%3a%2f%2fwww.gifde.com%2fgif%2fotros%2fdecoracion%2fcargando-loading%2fcargando-loading-041.gif&ehk=5k7Cxm0aV2Rb1zXFwfB%2boV3G%2bm7hc9e6UnHwx84JUBU%3d&risl=&pid=ImgRaw&r=0" alt="not found" />
+        </div>:<div> <Loader/> </div>
               
    }
-<div className="button-containerone">
-  <Link to = '/home'><button className="button-recipe">Volver Al Home</button></Link>
-  </div>
   </div>
   </div>
 )

@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import { useState ,useEffect} from "react";
 import {Link} from "react-router-dom"
 import { useHistory } from "react-router-dom";
@@ -34,14 +35,14 @@ function validate(input){
     }else if((!/^[A-Za-z0-9\s]+$/g.test(input.steps.trim()))){
        errors.steps = "El campo paso a paso solo acepta letras y numeros "
     }
-    }
+    
     if(!input.dishTypes){
         errors.dishTypes = "Es necesario algún tipo de plato"
     }else if(!/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(input.dishTypes.trim())){
         errors.dishTypes = "Solo se aceptan letras"
     }
     return errors
-
+}
 
 
 export default function RecipeCreate(){
@@ -93,7 +94,13 @@ function handleSelect(e){
     })
     console.log(input)
 }else{
-    alert("La dieta ya existe")
+    Swal.fire({
+        title:"La dieta ya existe",
+        text: "Selecciona otro tipo de dieta.",
+        icon:"error",
+        confirmButtonText:"Volver al formulario"
+        
+       })
 }
 }
 
@@ -110,7 +117,13 @@ function handleSubmit(e){
 if(input.name && input.summary&&input.image&&input.healthScore&&input.steps&&input.dishTypes 
 &&!errors.name&& !errors.summary&&!errors.image&&!errors.healthScore&&!errors.steps&&!errors.dishTypes&&input.diets.length !==0 &&input.diets.length<=3){
     dispatch(postRecipe(input))
-    alert("Receta creada exitosamente")
+    Swal.fire({
+        title:"Receta creada exitosamente",
+        text: "Tu receta fue creada correctamente.",
+        icon:"success",
+        confirmButtonText:"Volver al formulario"
+        
+       })
     setInput({
         name:"",
         summary:"",
@@ -123,7 +136,13 @@ if(input.name && input.summary&&input.image&&input.healthScore&&input.steps&&inp
     })
     history.push('/home')
 }else{
-    alert("Completa el formulario correctamente")
+   Swal.fire({
+    title:"Por favor completa el formulario correctamente",
+    text: "Rellena los campos correspondientes.",
+    icon:"error",
+    confirmButtonText:"Volver al formulario"
+    
+   })
 }
 }
 

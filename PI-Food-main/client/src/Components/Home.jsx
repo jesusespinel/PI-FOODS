@@ -7,10 +7,18 @@ import RecipeCard from "./RecipeCard";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import Paginado from "./Paginado";
+import Loader from "./Loader";
 import '../hojas-de-estilo/Home.css'
 
 
+
+
 export default function Home(){
+   
+
+
+
+
  const recipes = useSelector((state)=> state.recipes)
 
  const diets = useSelector((state)=> state.diets)
@@ -74,11 +82,12 @@ function handleSortByName(e){
 
  }
 
- function handleFilterByOrigen(e){
+ /* function handleFilterByOrigen(e){
    dispatch(filterByOrigen(e.target.value))
    setCurrentPage(1)
    setOrder("Ordenado"+e.target.value)
  }
+  */
  
  
 
@@ -87,13 +96,14 @@ function handleSortByName(e){
     <div className="contenedor-principal">
     <div className="navbar-container">
       <div className="recipe-container">
-      <button className="button-recipe"onClick={(e)=>{handleClick(e)}}>REFRESH</button>
-     <Link to = '/createRecipe'><button className="button-recipe">CREAR MI RECETA</button></Link>
+      <button className="button-recipe"onClick={(e)=>{handleClick(e)}}>Refrescar</button>
+     <Link to = '/createRecipe'><button className="button-recipe">Quiero mi receta!</button></Link>
      </div>
+     
             
       <div className="contenedor-filtros">
          <select onChange={handleFilterByDiets} className="filtros">
-           <option value = 'tipos'>Filter by type</option>
+           <option value = 'tipos'>Filtrar por tipo</option>
           
           <option value="gluten free">gluten free</option>
            <option value ="dairy free">dairy free</option>
@@ -112,21 +122,21 @@ function handleSortByName(e){
     
          </select>
          <select onChange={(e)=>handleSortByName(e)} className="filtros">
-            <option value ='All'>Order alphabetically</option>
+            <option value ='All'>Ordenar alfabeticamente</option>
             <option value = 'asc'>A:Z</option>
             <option value = 'des'>Z:A</option>
          </select>
 
          <select onChange={handleSortByScore} className="filtros">
-            <option value = 'default'>Order by Health Score</option>
+            <option value = 'default'>Ordenar por puntaje de salud</option>
             <option value= 'min'>Min to Max</option>
             <option value= 'max'>Max to Min</option>
          </select>
 
-         <select onChange={handleFilterByOrigen}>
+        {/*  <select onChange={handleFilterByOrigen}>
             <option value = "created">CREADOS</option>
             <option value = "api">EXISTENTES</option>
-         </select>
+         </select> */}
          
         
 
@@ -160,7 +170,7 @@ function handleSortByName(e){
     })
   } 
   
-  {recipes.length === 0 && <p>RECETAS NO ENCONTRADAS</p>}
+  {recipes.length === 0 && <Loader/>}
 </div>
     </div>
  )

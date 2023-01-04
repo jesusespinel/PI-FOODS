@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 .landing-page{
 background-image: url("../hojas-de-estilo/FOOOOOD.jpg");
 height: 100vh;
@@ -7,6 +8,7 @@ background-size: cover;
 position: relative;
 width: 100vw;
 
+
 }
 .button-welcome{
    position: absolute;
@@ -14,3 +16,43 @@ width: 100vw;
    left: 50%;
    
 }
+
+.titulo{
+   position: absolute;
+   top: 30%;
+   left: 25%;
+   transform: transalate(50%,-50%);
+   width: 50%;
+   color: rgb(28, 27, 27);
+   text-align: center;
+}
+.title{
+   font-size: 50px;
+   margin-bottom: 20px;
+   font-family: 'Dancing Script';
+}
+
+.button-landing{
+   appearance: none;
+   background-color: #ff8f46;
+   border: 1px solid rgba(27, 31, 35, .15);
+   border-radius: 6px;
+   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   padding: 6px 16px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   vertical-align: middle;
+   white-space: nowrap;
+ }

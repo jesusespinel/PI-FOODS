@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getName,} from "../actions";
@@ -18,7 +19,11 @@ import { getName,} from "../actions";
      function handleSubmit(e){
         e.preventDefault()
         if(name.length===0){
-            alert("Porfavor escriba un receta para iniciar la búsqueda")
+            Swal.fire({
+                title:'Por favor ingrese una receta para iniciar la búsqueda',
+                icon:'error',
+                confirmButtonText: 'Regresar'
+            })
         }else{
         dispatch(getName(name))
         setName("")
