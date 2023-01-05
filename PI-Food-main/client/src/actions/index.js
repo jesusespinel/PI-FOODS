@@ -1,21 +1,45 @@
 import axios from "axios"
 
-export const getRecipes = () =>(dispatch) =>{
+/* export const getRecipes = () =>(dispatch) =>{
     return fetch("http://localhost:3001/recipes")
     .then((r)=>r.json())
     .then((data)=>dispatch({type:"GET_RECIPES",payload:data}))
+} */
+
+export function getRecipes(){
+    return async function(dispatch){
+        try {
+            var json = await axios.get("/recipes")
+            return dispatch({type:"GET_RECIPES",payload: json.data })
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
-export const getTypes = () =>(dispatch) =>{
+/* export const getTypes = () =>(dispatch) =>{
     return fetch("http://localhost:3001/diets")
     .then((r=>r.json()))
     .then((data)=>dispatch({type:"GET_TYPES",payload:data}))
+ */
+export function getTypes(){
+    return async function(dispatch){
+        try {
+            var json = await axios.get("/diets")
+            return dispatch({type:"GET_TYPES",payload: json.data })        
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
+
+
 
 export function getName(name){
     return async function(dispatch){
         try {
-            var json = await axios.get("http://localhost:3001/recipes?name="+ name)
+            var json = await axios.get("/recipes?name="+ name)
             return dispatch({type:"GET_NAME",payload: json.data })
             
         } catch (error) {
@@ -54,43 +78,31 @@ export function orderByScore(payload){
 
 export function postRecipe(payload){
     return async function(dispatch){  
-const response = await axios.post("http://localhost:3001/recipes",payload)
+const response = await axios.post("/recipes",payload)
 console.log(response) 
 return response
     }
 }
-/*export function getDetail(id){
-    return function(dispatch){
-        axios.get("http://localhost:3001/recipes/" +id)
-        .then((response) =>{
-            return dispatch({type:"GET_DETAILS",payload:response.data})
-        }).catch((error) =>{
-            console.log (error)
+
+
+export function getDetail(id){
+    return async function(dispatch){
+        try {
+            var json = await axios.get(`/recipes/${id}`)
+            return dispatch({type:"GET_DETAIL",payload: json.data })
+            
+        } catch (error) {
+            console.log(error)
+        }
     }
-  )
 }
-} */
-
-/*export function getDetail(id){
-  return async function (dispatch) {
-    try {
-      var json = await axios.get(`http://localhost:3001/recipes/${id}`);
-      return dispatch({
-        type: "GET_DETAIL",
-        payload: json.data,
-      });
-    } catch (error) {
-      console.log("ID not found");
-    }
-  }
-} */
 
 
-export const getDetail= (id) =>(dispatch) =>{
+/* export const getDetail= (id) =>(dispatch) =>{
     return fetch(`http://localhost:3001/recipes/${id}`)
     .then((r)=>r.json())
     .then((data)=>dispatch({type:"GET_DETAIL",payload:data}))
-}
+ */
 
 export function cleanFilter(){
     return {
@@ -99,16 +111,6 @@ export function cleanFilter(){
     }
 }
 
-/*export function deleteRecipe(id){
-    return function(dispatch){
-        axios.delete(`http://localhost:3001/recipes/${id}`)
-        .then((response)=>{
-            return dispatch({type:"DELETE_RECIPE",payload:response.data})
-        })
-        .catch((error) =>{
-            console.log (error)
-    })
-} */
 /*export const deleteRecipe= (id) =>(dispatch) =>{
     return fetch(`http://localhost:3001/recipes/${id}`,{ method: 'DELETE' })
     .then((r)=>r.json())
@@ -118,7 +120,7 @@ export function cleanFilter(){
 export  function deleteRecipe(id){
     return async function (dispatch){
         try {
-            var deleteRecipe = await axios.delete("http://localhost:3001/recipes/"+ id)
+            var deleteRecipe = await axios.delete("recipes/"+ id)
             return dispatch({
                 type: "DELETE_RECIPE"
             })

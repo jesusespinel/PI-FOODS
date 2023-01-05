@@ -6,7 +6,7 @@ export default function ErrorNotFound(){
     return (
         <div className="not-found">
             <h1 className="text">Oops!..Lo sentimos, página no encontrada</h1>
-            <button className="button-recipe">Volver atrás</button>
+            <Link to="/home"><button className="button-recipe">Volver atrás</button></Link>
             <br></br>
             <img src="https://i.imgur.com/WvEu0cO.png" height="500" weight ="500" alt="page not found"/>
             <div className="btn-cont">
