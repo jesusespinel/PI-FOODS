@@ -6,7 +6,7 @@ import RecipeCreate from './Components/RecipeCreate'
 import Details from './Components/Details';
 import ErrorNotFound from './Components/ErrorNotFound';
 import axios from 'axios';
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://pi-foods-production-1710.up.railway.app/";
 function App() {
   return (
     <BrowserRouter>
