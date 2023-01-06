@@ -1,6 +1,6 @@
 const  axios = require('axios').default;
 const{Recipe,Diet} = require( '../db')
-
+require('dotenv').config()
 const {API_KEY} = process.env
 
 const getDataApi = async() =>{
