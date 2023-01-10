@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
-.landing-page{
+/* .landing-page{
 background-image: url("../hojas-de-estilo/FOOOOOD.jpg");
 height: 100vh;
 background-position: center;
@@ -55,4 +55,128 @@ width: 100vw;
    touch-action: manipulation;
    vertical-align: middle;
    white-space: nowrap;
+ } */
+
+/* section{
+  padding: 50px 10%;
+}
+img{
+  width: 100%;
+}
+
+ .landing-page{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   background:url('./background.png') ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   gap: 1rem;
  }
+
+ .home-text{
+   flex: 1 1 17rem;
+   justify-items: center;
+
+ }
+.home-img{
+   flex: 1 1 17rem;
+}
+ .home-text span{
+   font-size: 1rem;
+   text-transform: uppercase;
+   font-weight: 600;
+   color:#16b978
+ }
+
+ .home-text h1{
+   font-size: 4rem;
+   color: #092b54
+ }
+
+ .home-text p{
+   margin: 0.5rem 0 1.4rem;
+ }
+
+ .btn{
+   padding: 10px 20px;
+   border: 2px solid ;
+   border-radius: 40px;
+   color: #16b978;
+   font-weight: 500;
+ }
+
+ .btn:hover{
+ letter-spacing: 2px;
+ color: #fff;
+ background: var(--main);
+ }
+  */
+
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background: url("./background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+   align-items: center;
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  
+  .banner__content {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color:green;
+    
+  }
+  .container-lp {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .banner__text {
+    width: 500px;
+  }
+  .banner__text h3 {
+    font-size: 50px;
+  }
+  .banner__text h1 {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 900;
+    margin-top: 20px;
+  }
+  .banner__text p {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .banner__btn {
+    margin-top: 35px;
+  }
+
+
+  .btn {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 12px;
+    padding: 20px 40px;
+    
+  }
+  .btn-smart {
+    background: green;
+  }
+
