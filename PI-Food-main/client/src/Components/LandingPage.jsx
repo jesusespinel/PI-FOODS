@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../hojas-de-estilo/LandingPage.css'
-import salad from '../hojas-de-estilo/salad.png'
+//import salad from '../hojas-de-estilo/salad.png'
 //import logo from '../hojas-de-estilo/logo.png'
 import Logo from "./Logo";
 export default function LandingPage(){
